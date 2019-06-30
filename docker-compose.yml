@@ -1,0 +1,10 @@
+version: "3"
+services:
+  bridge:
+    image: contractland/terra-bridge-eth-client
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    command: "true"
+    restart: on-failure
